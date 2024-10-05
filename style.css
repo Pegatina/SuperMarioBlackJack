@@ -45,13 +45,20 @@ input[type="image"]:disabled {
 }
 
 /*Responsive para móviles*/
-@media (max-width: 425px) {
+@media (max-width: 600px) {
   .Title {
     font-size: 20px;
   }
 
   .container {
     width: 70%;
+  }
+  #PC-card,
+  #player-card {
+    height: 200px;
+  }
+  h1 {
+    font-size: 25px;
   }
 }
 
