@@ -1,5 +1,6 @@
 import _ from 'underscore';
 import { preloadCards } from './preload-Cards';
+import { preloadAudio } from './preload-Audio';
 /**
  * Función que crea una nueva baraja cada partida y precarga las imágenes de las cartas.
  * @param {Array<String>} cardTypes - Por ejemplo ['C', 'D', 'H', 'S']
@@ -28,6 +29,10 @@ export const createDeck = async () => {
 
     // Pre-cargamos las imágenes de las cartas
     await preloadCards(deck);
+
+    // Pre-cargamos el sonido de la carta
+    const audioSrc = 'assets/flipcard.mp3'; // Ruta del sonido
+    await preloadAudio(audioSrc);
 
     // Devolvemos la baraja barajada
     return _.shuffle(deck);

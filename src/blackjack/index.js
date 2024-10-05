@@ -10,6 +10,9 @@ const Play = (() => { //Protegemos el código para que no se pueda modificar des
     let playersPoints = [];
     let deck = [];
 
+    const audioSrc = 'assets/flipcard.mp3';
+    let flipCardAudio = new Audio(audioSrc);
+
     //Referencias html    
     const btnPick = document.querySelector('#btnPick'),
         btnStop = document.querySelector('#btnStop'),
@@ -21,8 +24,9 @@ const Play = (() => { //Protegemos el código para que no se pueda modificar des
     //Eventos
     btnPick.addEventListener('click', () => {
 
-        let flipCard = new Audio('assets/flipcard.mp3')
-        flipCard.play()
+        flipCardAudio.currentTime = 0; // Reiniciamos el audio para que se reproduzca desde el inicio
+        flipCardAudio.play();
+        
         btnStop.disabled = false; //Hasta que no pidan la primera carta, no se puede parar
 
         const card = pickCard(deck);
@@ -45,7 +49,7 @@ const Play = (() => { //Protegemos el código para que no se pueda modificar des
     })
 
     btnNew.addEventListener('click', async () => {
-        deck = await createDeck();       
+        deck = await createDeck();
         playersPoints = [];
         startGame(playersPoints);
         btnNew.disabled = true;
