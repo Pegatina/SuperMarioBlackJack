@@ -1,0 +1,19 @@
+{
+  "name": "super-mario-blackjack",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "js-confetti": "^0.12.0",
+    "sweetalert2": "^11.6.13",
+    "underscore": "^1.13.6"
+  }
+}

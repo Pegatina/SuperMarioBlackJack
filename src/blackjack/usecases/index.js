@@ -1,0 +1,9 @@
+export { acumulatePoints } from './acumulate-points';
+export { cardValue } from './card-value';
+export { createCard } from './create-card';
+export { createDeck } from './create-deck';
+export { getWinner } from './get-winner';
+export { PCTurn } from './PC-turn';
+export { pickCard } from './pick-card';
+export { preloadCards } from './preload-Cards';
+export { startGame } from './start-game';

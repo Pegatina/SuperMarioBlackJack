@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Mario BlackJack</title>    
+    <link href="https://fonts.googleapis.com/css?family=Rye" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">   
+  </head>
+  <body>
+    <header class="Title">
+      Blackjack
+  </header>
+  <div class="row mt-2">
+    <div class="d-flex flex-column align-items-center">      
+          <button id="btnNew" class="btn btn-danger button-max-width">Nuevo juego</button>
+          <input type="image" src="./assets/cards/deckCard.png" id="btnPick" disabled = "disabled">         
+          <button id="btnStop" disabled= "disabled" class="btn btn-primary button-max-width">Parar</button>
+      </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>Jugador - <small>0</small></h1>
+        <div id="player-card" class="cardDiv">        
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col">
+        <h1>Ordenador - <small>0</small></h1>
+        <div id="PC-card" class="cardDiv">         
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/main.js"></script>
+  </body>
+</html>
